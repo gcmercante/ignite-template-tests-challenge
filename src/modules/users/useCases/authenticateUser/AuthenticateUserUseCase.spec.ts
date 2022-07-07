@@ -38,7 +38,7 @@ describe("-- Authenticate User Use Case --", () => {
   });
 
   test("should be able to create auth token", async () => {
-    const user = await userRepository.create({
+    await userRepository.create({
       name: "Teste",
       email: "teste@example.com",
       password: await hash("123", 8),
